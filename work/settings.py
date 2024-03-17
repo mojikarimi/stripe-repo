@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = secret_key
+SECRET_KEY =  'django-insecure-aa$aeo@z*2vq1f@+w@^v*!n9m+kkinx)e#xm9xtco+k529)5)%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -147,4 +147,4 @@ MESSAGE_TAGS = {
 
 # Stripe
 STRIPE_PUBLIC_KEY = stripe_public_key
-STRIPE_SECRET_KEY = "sk_test_51OF9shIKF4RrMLl2nKHUoez72hzKFsQd1Lf9pOp2TYjM99oeCupk1rBhtRfVJiUVJZqCjmitHRik9ZKHvjNr2AWa00KAVeR3zR"
+STRIPE_SECRET_KEY = stripe_secret_key

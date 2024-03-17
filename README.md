@@ -20,7 +20,7 @@ In this project, the steps of connecting to the stripe are written step by step 
 ## Installing the virtual environment
 
 ```python
-pip install -m venv venv
+python -m venv venv
 ```
 
 ## Install the required packages
