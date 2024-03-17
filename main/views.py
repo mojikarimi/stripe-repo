@@ -2,8 +2,8 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 import stripe
 from django.contrib import messages
+
 # Create your views here.
-from django.urls import reverse
 
 stripe.api_key = 'sk_test_51OF9shIKF4RrMLl2nKHUoez72hzKFsQd1Lf9pOp2TYjM99oeCupk1rBhtRfVJiUVJZqCjmitHRik9ZKHvjNr2AWa00KAVeR3zR'
 
