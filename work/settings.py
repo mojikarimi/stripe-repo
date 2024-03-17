@@ -9,25 +9,25 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+from secure import *  # for ignore file
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from django.contrib import messages
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-aa$aeo@z*2vq1f@+w@^v*!n9m+kkinx)e#xm9xtco+k529)5)%'
+SECRET_KEY = secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+# DEBU = False
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['example.com']
 
 
 # Application definition
@@ -73,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'work.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -83,6 +82,23 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# for deploy project
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'mydatabase',
+#         'USER': 'mydatabaseuser',
+#         'PASSWORD': 'mypassword',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# SECURE_BROWSER_XSS_FILTER = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 
 # Password validation
@@ -103,7 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -115,12 +130,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
 
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -130,5 +145,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-STRIPE_PUBLIC_KEY = "pk_test_51OF9shIKF4RrMLl2F8OMPjs7DAeBlntXQpAdwVGRGHteZbpqWCDSd8qN1clwx6aEEV62H6FjkLYfR9u1ooJMzLve005SbkdNmx"
+# Stripe
+STRIPE_PUBLIC_KEY = strioe_public_key
 STRIPE_SECRET_KEY = "sk_test_51OF9shIKF4RrMLl2nKHUoez72hzKFsQd1Lf9pOp2TYjM99oeCupk1rBhtRfVJiUVJZqCjmitHRik9ZKHvjNr2AWa00KAVeR3zR"

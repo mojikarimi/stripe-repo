@@ -1,0 +1,2 @@
+secret_key = 'django-insecure-aa$aeo@z*2vq1f@+w@^v*!n9m+kkinx)e#xm9xtco+k529)5)%'
+strioe_public_key = "pk_test_51OF9shIKF4RrMLl2F8OMPjs7DAeBlntXQpAdwVGRGHteZbpqWCDSd8qN1clwx6aEEV62H6FjkLYfR9u1ooJMzLve005SbkdNmx"
