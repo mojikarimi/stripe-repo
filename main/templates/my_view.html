@@ -1,0 +1,15 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+<h1>my payment</h1>
+    <form action="{% url 'payment' %}" method="post">
+    {% csrf_token %}
+        <input type="hidden" name="amount" value="{{ amount }}">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="my payment"
+            data-amount="{{ amount }}"
+            data-local="aout">
+        </script></form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% if messages %}
+    {% for message in messages %}
+        <div style="position: absolute;
+                z-index: 9000 !important;
+
+                    right: 0;
+
+                width: 25rem;" id="khom" class="container moji">
+            <div class="alert alert-{{ message.tags }} alert-dismissible text-center" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                <strong>
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                            Warning:
+                    {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                            Attention:
+                    {% else %}
+                        {{ message.tags | title }}
+                    {% endif %}
+                </strong>
+                {{ message }}
+            </div>
+        </div>
+
+    {% endfor %}
+{% endif %}

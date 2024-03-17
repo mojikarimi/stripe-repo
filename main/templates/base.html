@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Accept a payment</title>
+    <meta name="description" content="A demo of a payment on Stripe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'bootstrap-datepicker.min.css' %}"
+          rel="stylesheet" type="text/css"/>
+</head>
+<body>
+{% block content %}
+{% endblock %}
+<script>
+    setTimeout(function () {
+        $('#khom').hide('slow');
+    }, 5000);
+</script>
+<script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

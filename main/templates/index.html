@@ -1,0 +1,12 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+    {% include '_alert.html' %}
+<h1>my payment</h1>
+    <form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    <input name="amount" type="text">
+    <button type="submit">send</button>
+    </form>
+{% endblock %}
