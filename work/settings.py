@@ -146,5 +146,5 @@ MESSAGE_TAGS = {
 }
 
 # Stripe
-STRIPE_PUBLIC_KEY = strioe_public_key
+STRIPE_PUBLIC_KEY = stripe_public_key
 STRIPE_SECRET_KEY = "sk_test_51OF9shIKF4RrMLl2nKHUoez72hzKFsQd1Lf9pOp2TYjM99oeCupk1rBhtRfVJiUVJZqCjmitHRik9ZKHvjNr2AWa00KAVeR3zR"
